@@ -88,6 +88,10 @@ TEST_URL  = "https://drive.google.com/uc?export=download&id=1rljS-VYRuBVXpO1mm40
 def load_data():
     return _clean(pd.read_csv(TRAIN_URL, low_memory=False))
 
+@st.cache_data(show_spinner="Counting full dataset…")
+def total_rows():
+    return len(pd.read_csv(TRAIN_URL, usecols=[0])) + len(pd.read_csv(TEST_URL, usecols=[0]))
+
 df = load_data()
 
 MODEL_9_FEATURES = [
@@ -113,7 +117,7 @@ AVAILABLE_FEATURES = [c for c in MODEL_9_FEATURES if c in df.columns]
 # ─────────────────────────────────────────────
 # HERO BANNER
 # ─────────────────────────────────────────────
-n_rows       = len(df)
+n_rows       = total_rows()
 towns_count  = df["town"].nunique()
 median_price = df["resale_price"].median()
 

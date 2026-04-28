@@ -117,7 +117,7 @@ FLAT_TYPE_ENCODING = {f: i for i, f in enumerate(sorted(FLAT_TYPES))}
 # ─────────────────────────────────────────────
 # HERO BANNER
 # ─────────────────────────────────────────────
-n_rows       = len(df)
+n_rows       = len(df_all)
 towns_count  = df["town"].nunique()
 median_price = df["resale_price"].median()
 

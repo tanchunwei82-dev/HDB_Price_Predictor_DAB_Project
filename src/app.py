@@ -258,7 +258,7 @@ AVAILABLE_FEATURES = [c for c in MODEL_9_FEATURES if c in df.columns]
 # ─────────────────────────────────────────────
 # HERO BANNER (inline SVG)
 # ─────────────────────────────────────────────
-n_rows = len(df)
+n_rows = len(df_all)
 towns_count = df["town"].nunique()
 median_price = df["resale_price"].median()
 
