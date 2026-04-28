@@ -23,8 +23,8 @@ Singapore's HDB resale market is dynamic and location-sensitive. This tool gives
 
 | Dataset | Records | Description |
 |---|---|---|
-| `train_clean_working.csv` | ~290,000 | Cleaned HDB resale transactions (train set) |
-| `test_clean_working.csv` | ~32,000 | Cleaned HDB resale transactions (test set) |
+| `train_clean_working.csv` | ~160,000 | Cleaned HDB resale transactions (train set) |
+| `test_clean_working.csv` | ~16,000 | Cleaned HDB resale transactions (test set) |
 
 **Key Features Used:**
 
