@@ -52,8 +52,6 @@ Singapore's HDB resale market is dynamic and location-sensitive. This tool gives
 │   ├── app_prediction.py         # Prediction tab only
 │   ├── app_evaluation.py         # Evaluation tabs only
 │   ├── model.pkl                 # Trained XGBoost model
-│   ├── train_clean_working.csv   # Training data
-│   └── test_clean_working.csv    # Test data
 │
 ├── data_cleaning_eda.ipynb       # Data cleaning & EDA notebook
 ├── ml.ipynb                      # Model training notebook
