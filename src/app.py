@@ -198,15 +198,17 @@ def _clean(df):
     df["flat_type_encoded"] = df["flat_type"].map(flat_type_map)
     return df
 
+TRAIN_URL = "https://drive.google.com/uc?export=download&id=1J2LjbZJ2C2PSZLblhxa9xUrAg0fDeO7v"
+TEST_URL  = "https://drive.google.com/uc?export=download&id=1rljS-VYRuBVXpO1mm40J1URiIm0X6Hin"
+
 @st.cache_data(show_spinner="Loading dataset…")
 def load_data():
-    train = _clean(pd.read_csv(DATA_DIR / "train_sample.csv", low_memory=False))
-    return train
+    return _clean(pd.read_csv(TRAIN_URL, low_memory=False))
 
 @st.cache_data(show_spinner="Loading full dataset for comparables…")
 def load_all_data():
-    train = _clean(pd.read_csv(DATA_DIR / "train_sample.csv", low_memory=False))
-    test  = _clean(pd.read_csv(DATA_DIR / "test_sample.csv",  low_memory=False))
+    train = _clean(pd.read_csv(TRAIN_URL, low_memory=False))
+    test  = _clean(pd.read_csv(TEST_URL,  low_memory=False))
     return pd.concat([train, test], ignore_index=True)
 
 @st.cache_resource(show_spinner="Loading prediction model…")

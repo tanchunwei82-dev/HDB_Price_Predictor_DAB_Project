@@ -81,9 +81,12 @@ def _clean(data):
     data["flat_type_encoded"] = data["flat_type"].map({f: i for i, f in enumerate(flat_types_sorted)})
     return data
 
+TRAIN_URL = "https://drive.google.com/uc?export=download&id=1J2LjbZJ2C2PSZLblhxa9xUrAg0fDeO7v"
+TEST_URL  = "https://drive.google.com/uc?export=download&id=1rljS-VYRuBVXpO1mm40J1URiIm0X6Hin"
+
 @st.cache_data(show_spinner="Loading dataset…")
 def load_data():
-    return _clean(pd.read_csv(DATA_DIR / "train_sample.csv", low_memory=False))
+    return _clean(pd.read_csv(TRAIN_URL, low_memory=False))
 
 df = load_data()
 
