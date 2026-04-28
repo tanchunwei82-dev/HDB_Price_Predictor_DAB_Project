@@ -100,23 +100,6 @@ The app will open at `http://localhost:8501`.
 
 ---
 
-## ☁️ Deploying to Streamlit Cloud
-
-1. **Push this repository to GitHub** (public or private)
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-3. Click **"New app"**
-4. Fill in the fields:
-   - **Repository:** `YOUR_USERNAME/YOUR_REPO_NAME`
-   - **Branch:** `main`
-   - **Main file path:** `src/app.py`
-5. Click **"Deploy!"**
-
-Streamlit Cloud will automatically install from `requirements.txt` and launch your app.
-
-> ⚠️ **Large file note:** The two CSV files (~67 MB total) and `model.pkl` (~2.2 MB) are committed to the repo. GitHub allows files up to 100 MB, but if you hit limits, consider using [Git LFS](https://git-lfs.github.com/) for the CSVs.
-
----
-
 ## 🧠 Models
 
 | Model | Train R² | Notes |
