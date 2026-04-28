@@ -21,10 +21,12 @@ Singapore's HDB resale market is dynamic and location-sensitive. This tool gives
 
 ## 📊 Dataset
 
-| Dataset | Records | Description |
-|---|---|---|
-| `train_clean_working.csv` | ~160,000 | Cleaned HDB resale transactions (train set) |
-| `test_clean_working.csv` | ~16,000 | Cleaned HDB resale transactions (test set) |
+| Dataset | Records | Description | Download |
+|---|---|---|---|
+| `train_clean_working.csv` | ~160,000 | Cleaned HDB resale transactions (train set) | [Google Drive](https://drive.google.com/file/d/1J2LjbZJ2C2PSZLblhxa9xUrAg0fDeO7v/view?usp=sharing) |
+| `test_clean_working.csv` | ~16,000 | Cleaned HDB resale transactions (test set) | [Google Drive](https://drive.google.com/file/d/1rljS-VYRuBVXpO1mm40J1URiIm0X6Hin/view?usp=sharing) |
+
+> **Note:** The CSVs are not committed to the repo. Download both files from the links above and place them in the project root (alongside the notebooks) so `data_cleaning_eda.ipynb` and `ml.ipynb` can locate them.
 
 **Key Features Used:**
 
